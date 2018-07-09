@@ -1,0 +1,46 @@
+[0m[[0m[31merror[0m] [0m[0m/home/hduser/Documents/JimmyProject/src/main/scala/CBTSJimmy.scala:162:75: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : Array[((org.apache.spark.mllib.classification.SVMModel, Int, Int, Int, Int), Int)][0m
+[0m[[0m[31merror[0m] [0m[0m required: Array[(org.apache.spark.mllib.classification.SVMModel, Int, Int, Int, Int)][0m
+[0m[[0m[31merror[0m] [0m[0m		override def predict(testData: Vector): Double = predictPoint(testData, broadcastZip)[0m
+[0m[[0m[31merror[0m] [0m[0m		                                                                        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/hduser/Documents/JimmyProject/src/main/scala/CBTSJimmy.scala:171:39: value _1 is not a member of org.apache.spark.mllib.classification.SVMModel[0m
+[0m[[0m[31merror[0m] [0m[0m				var prediction = models(index)._1._1.predict(testData)[0m
+[0m[[0m[31merror[0m] [0m[0m				                                  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/hduser/Documents/JimmyProject/src/main/scala/CBTSJimmy.scala:174:35: value _2 is not a member of org.apache.spark.mllib.classification.SVMModel[0m
+[0m[[0m[31merror[0m] [0m[0m					nextIndex = models(index)._1._2[0m
+[0m[[0m[31merror[0m] [0m[0m					                             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/hduser/Documents/JimmyProject/src/main/scala/CBTSJimmy.scala:178:35: value _3 is not a member of org.apache.spark.mllib.classification.SVMModel[0m
+[0m[[0m[31merror[0m] [0m[0m					nextIndex = models(index)._1._3[0m
+[0m[[0m[31merror[0m] [0m[0m					                             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/hduser/Documents/JimmyProject/src/main/scala/CBTSJimmy.scala:184:32: value _4 is not a member of org.apache.spark.mllib.classification.SVMModel[0m
+[0m[[0m[31merror[0m] [0m[0m						index = models(index)._1._4[0m
+[0m[[0m[31merror[0m] [0m[0m						                         ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/hduser/Documents/JimmyProject/src/main/scala/CBTSJimmy.scala:186:32: value _5 is not a member of org.apache.spark.mllib.classification.SVMModel[0m
+[0m[[0m[31merror[0m] [0m[0m						index = models(index)._1._5[0m
+[0m[[0m[31merror[0m] [0m[0m						                         ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/hduser/Documents/JimmyProject/src/main/scala/OVOJimmy.scala:171:75: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : Array[((org.apache.spark.mllib.classification.SVMModel, Int, Int), Int)][0m
+[0m[[0m[31merror[0m] [0m[0m required: Array[(org.apache.spark.mllib.classification.SVMModel, Int, Int)][0m
+[0m[[0m[31merror[0m] [0m[0m		override def predict(testData: Vector): Double = predictPoint(testData, broadcastZip)[0m
+[0m[[0m[31merror[0m] [0m[0m		                                                                        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/hduser/Documents/JimmyProject/src/main/scala/OVOJimmy.scala:176:41: constructor cannot be instantiated to expected type;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : (T1, T2)[0m
+[0m[[0m[31merror[0m] [0m[0m required: (org.apache.spark.mllib.classification.SVMModel, Int, Int)[0m
+[0m[[0m[31merror[0m] [0m[0m			val scoredModels = models.map { case ((model, posLabel, negLabel), broadcast) => (posLabel.toDouble, negLabel.toDouble, model.predict(testData))}[0m
+[0m[[0m[31merror[0m] [0m[0m			                                     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/hduser/Documents/JimmyProject/src/main/scala/OVOJimmy.scala:176:95: value toDouble is not a member of Any[0m
+[0m[[0m[31merror[0m] [0m[0m			val scoredModels = models.map { case ((model, posLabel, negLabel), broadcast) => (posLabel.toDouble, negLabel.toDouble, model.predict(testData))}[0m
+[0m[[0m[31merror[0m] [0m[0m			                                                                                           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/hduser/Documents/JimmyProject/src/main/scala/OVOJimmy.scala:176:114: value toDouble is not a member of Any[0m
+[0m[[0m[31merror[0m] [0m[0m			val scoredModels = models.map { case ((model, posLabel, negLabel), broadcast) => (posLabel.toDouble, negLabel.toDouble, model.predict(testData))}[0m
+[0m[[0m[31merror[0m] [0m[0m			                                                                                                              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/hduser/Documents/JimmyProject/src/main/scala/OVOJimmy.scala:176:130: value predict is not a member of Any[0m
+[0m[[0m[31merror[0m] [0m[0m			val scoredModels = models.map { case ((model, posLabel, negLabel), broadcast) => (posLabel.toDouble, negLabel.toDouble, model.predict(testData))}[0m
+[0m[[0m[31merror[0m] [0m[0m			                                                                                                                              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/hduser/Documents/JimmyProject/src/main/scala/OVOJimmy.scala:177:41: value filter is not a member of Array[Nothing][0m
+[0m[[0m[31merror[0m] [0m[0m			val filteredModelsPos = scoredModels.filter(_._3>=0.0).map{case (posLabel, negLabel, score) => (posLabel, score)}[0m
+[0m[[0m[31merror[0m] [0m[0m			                                     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/hduser/Documents/JimmyProject/src/main/scala/OVOJimmy.scala:178:41: value filter is not a member of Array[Nothing][0m
+[0m[[0m[31merror[0m] [0m[0m			val filteredModelsNeg = scoredModels.filter(_._3< 0.0).map{case (posLabel, negLabel, score) => (negLabel, score)}[0m
+[0m[[0m[31merror[0m] [0m[0m			                                     ^[0m
+[0m[[0m[31merror[0m] [0m[0m13 errors found[0m
